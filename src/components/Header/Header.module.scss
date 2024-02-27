@@ -1,0 +1,29 @@
+.logo {
+  background: #121fcf;
+  background: linear-gradient(90deg, #338cf5 0%, #2fc6cd 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.header {
+  background-color: #f8fafc !important;
+  box-shadow: none !important;
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .headerLink {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  .headerLink:hover {
+    transition: 0.2s;
+    color: #0eb4ef;
+  }
+}
