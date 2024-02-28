@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.127fb5cb.css",
-    "main.js": "./static/js/main.0e1eef39.js",
+    "main.css": "./static/css/main.ca6c85cc.css",
+    "main.js": "./static/js/main.82f2df1f.js",
     "static/media/derivative-geometry.jpg": "./static/media/derivative-geometry.4e28ddd22749e2ed81b1.jpg",
     "index.html": "./index.html",
-    "main.127fb5cb.css.map": "./static/css/main.127fb5cb.css.map",
-    "main.0e1eef39.js.map": "./static/js/main.0e1eef39.js.map"
+    "main.ca6c85cc.css.map": "./static/css/main.ca6c85cc.css.map",
+    "main.82f2df1f.js.map": "./static/js/main.82f2df1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.127fb5cb.css",
-    "static/js/main.0e1eef39.js"
+    "static/css/main.ca6c85cc.css",
+    "static/js/main.82f2df1f.js"
   ]
 }
