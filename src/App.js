@@ -14,6 +14,14 @@ function App() {
               </PageLayout>
             }
           />
+          <Route
+            path="*"
+            element={
+              <PageLayout>
+                <Home />
+              </PageLayout>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>
