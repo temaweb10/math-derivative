@@ -8,6 +8,10 @@
   cursor: pointer;
 }
 
+.menuContainer {
+  display: none;
+}
+
 .header {
   background-color: #f8fafc !important;
   box-shadow: none !important;
@@ -25,5 +29,22 @@
   .headerLink:hover {
     transition: 0.2s;
     color: #0eb4ef;
+  }
+}
+.headerLink {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0eb4ef;
+  margin-left: 20px;
+  text-decoration: underline;
+  margin-left: 0px;
+}
+
+@media (max-width: 900px) {
+  .headerNav {
+    display: none;
+  }
+  .menuContainer {
+    display: flex;
   }
 }

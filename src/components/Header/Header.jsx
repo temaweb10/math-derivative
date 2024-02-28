@@ -1,55 +1,45 @@
-import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
-import Avatar from "@mui/material/Avatar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
-import Tooltip from "@mui/material/Tooltip";
-import Typography from "@mui/material/Typography";
+
 import React from "react";
 import { Link } from "react-router-dom";
 import stylesHeader from "./Header.module.scss";
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
+const pages = [
+  { page: "Примеры", to: "/tasks" },
+  { page: "Калькулятор производной", to: "/calculate" },
+];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <AppBar position="static" className={stylesHeader.header}>
       <Container maxWidth="xl">
         <Toolbar className={stylesHeader.toolbar} disableGutters>
-          <span className={stylesHeader.logo}>Производная</span>
+          <span className={stylesHeader.logo}>πроизводная</span>
           <nav className={stylesHeader.headerNav}>
             <Link to="/tasks" className={stylesHeader.headerLink}>
               Задачи
             </Link>
-            <Link to="/tasks" className={stylesHeader.headerLink}>
+            <Link to="/calculate" className={stylesHeader.headerLink}>
               Калькулятор производной
             </Link>
           </nav>
-          {/*  <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <div className={stylesHeader.menuContainer}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -58,7 +48,7 @@ function Header() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon htmlColor="#111" />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -78,25 +68,19 @@ function Header() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {pages.map(({ page, to }) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link
+                    className={stylesHeader.headerLink}
+                    to={to}
+                    style={{ textAlign: "center" }}
+                  >
+                    {page}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
-          </Box> */}
-
-          {/*   <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box> */}
+          </div>
         </Toolbar>
       </Container>
     </AppBar>

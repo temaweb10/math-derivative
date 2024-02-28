@@ -7,7 +7,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/math-derivative/"
+            path="/"
             element={
               <PageLayout>
                 <Home />
