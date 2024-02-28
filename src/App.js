@@ -4,7 +4,7 @@ import PageLayout from "./components/PageLayout/PageLayout";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/math-derivative">
         <Routes>
           <Route
             path="/"
